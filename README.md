@@ -65,3 +65,5 @@ The user has several ways to use his desktop, once it is initialized. He can sim
 ## Circuit & cables managment
 
 ![Idesk - Circuit](https://github.com/FlorianBergeron/idesk/blob/master/img/Circuit.png)
+
+[TinkerCad - Simulation](https://www.tinkercad.com/things/dVSjHSEyxxZ-copy-of-recevoir-nombre-du-moniteur-serie/editel?sharecode=8AuDeiMorbC4D-xe5-kdRXxgWL59hRrwepK516i-S3I)
