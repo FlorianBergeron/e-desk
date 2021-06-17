@@ -27,21 +27,21 @@ void loop()
   Serial.print(temperature);
   Serial.println(" degres Celsius");
   
-  int light_tension = analogRead(capteurLum);
+  float light_tension = analogRead(capteurLum);
   Serial.print(light_tension);
   Serial.println(" lightness");
   
-  float l = (light_tension * 255 / 471) - 128; //[-128,127]
-  
-  uint32_t color = pixels.Color(128-l, 128-l, 128-l);
+  int l = ((light_tension / 500) * 127) - 64; //[-64,63]
+
+  uint32_t color = pixels.Color(128+l, 128+l, 128+l);
   
   if (temperature > 40){
-    int col = 128 + (temperature - 40) * 5;
-  	color = pixels.Color(128-l, 128-l, ((col < 128)?col:128)-l);
+    int blue = 128 + l + (temperature - 40) * 5;
+  	color = pixels.Color(128+l, 128+l, ((blue < 255)?blue:255));
     FAN_SPEED(temperature - 40);
   } else if (temperature < 20) {
-    int col = 128 + (20 - temperature) * 5;
-    color = pixels.Color(((col < 128)?col:128)-l, 128-l, 128-l);
+    int red = 128 + l + (20 - temperature) * 5;
+    color = pixels.Color(((red < 255)?red:255), 128+l, 128+l);
     FAN_SPEED(0);
   }
   pixels.fill(color);
