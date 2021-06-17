@@ -12,6 +12,11 @@ So we thought of the following solution:
 * A fan that turns on / off according to the ambient temperature of the room and is able to modulate itself according to it.
 * Buttons to activate / deactivate LEDs, fan and the entire system.
 
+## How it works
+The user has several ways to use his desktop, once it is initialized. He can simply let the sensors manage the different functionalities mentioned above or use his mobile application to adjust the color of the LEDs or modulate the intensity of his fan (see technical diagram - big data infrastructure):
+
+![big data infrastructure](https://github.com/FlorianBergeron/idesk/blob/master/img/Big_data_infrastructure.png)
+
 ## Hardware
 **Arduino - UNO**
 
